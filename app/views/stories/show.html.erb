@@ -7,4 +7,5 @@
       <p><%= @story.description %></p>
 
       <p><%= link_to "Edit", edit_story_path(@story) %></p>
+      <%= link_to 'Delete', story_path(@story), method: :delete, data: { confirm: 'Are you sure?' } %>
  

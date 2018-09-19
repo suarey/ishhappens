@@ -50,14 +50,15 @@ class StoriesController < ApplicationController
           # end
         end
       
-      # DELETE /houses/1
-      # DELETE /houses/1.json
       def destroy
-        @story.destroy
-        respond_to do |format|
-           redirect_to story_url, notice: 'Story was successfully destroyed.' 
-          head :no_content 
-        end
+        @story = Story.find params[:id]
+        @story.destroy 
+        redirect_to stories_path
+      
+        # respond_to do |format|
+        #    redirect_to story_path, notice: 'Story was successfully deleted.' 
+        #   head :no_content 
+       
       end
     
       private

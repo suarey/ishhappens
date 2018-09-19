@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   get '/signup' => 'users#new'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
-
+  # delete '/stories/:id', to: 'stories#destroy'
   
 end
