@@ -1,1 +1,12 @@
 <h1>Hello</h1>
+
+
+
+<div>
+    <ul>
+
+        <% @stories.each do |s| %>
+            <li><%= link_to "View Story", story_path(s) %></li>
+            <% end %>
+    </ul>
+</div>

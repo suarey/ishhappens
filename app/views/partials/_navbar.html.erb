@@ -12,11 +12,22 @@
         <%= link_to "Create Account", new_user_path, {:class => "nav-link"} %>
       </li>
       <li class="nav-item">
-      <%= link_to "Login", login_path, {:class => "nav-link"} %>
+      <%= link_to "Create Story", new_story_path, {:class => "nav-link"} %>
     </li>
+      <% if !current_user %>
       <li class="nav-item">
-      <%= link_to "Logout", logout_path, {:class => "nav-link"} %>
+       <%= link_to "Login", login_path, {:class => "nav-link"} %>
+     </li>
+    <% end %>
+    <% if current_user %>
+      <li class="nav-item">
+      <%= link_to "Logout", session_path('dummy'),{:class => "nav-link", :method => "delete"} %>
+
     </li>
+    <li class="nav-item">
+      <span class="nav-link"><%= current_user.username %></span>
+    </li>
+    <% end %>
       </li>
     </ul>
   </div>
