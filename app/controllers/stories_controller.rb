@@ -15,36 +15,39 @@ class StoriesController < ApplicationController
         @story = Story.new
       end
     
-      # GET /houses/1/edit
+     
       def edit
         @story = Story.find params[:id]
       end
-    
-      # POST /houses
 
-      # POST /houses.json
       def create
         @story = current_user.stories.new(story_params)
-
+        # @story = current_user.stories.new
         
         if @story.save
-          redirect_to @story, notice: 'Story was successfully created!' 
+          redirect_to story_path(@story)
         else
             redirect_to 'new'
         end
       end
     
-      # PATCH/PUT /houses/1
-      # PATCH/PUT /houses/1.json
-        def update
-          respond_to do |format|
-            if @story.update(story_params)
-            redirect_to @story, notice: 'Story was successfully updated.' 
 
-            else
-            render :edit 
-            end
+        def update
+          @story = Story.find(params[:id])
+
+          if @story.update(story_params)
+            redirect_to story_path(@story)
+          else 
+            redirect to "edit"
           end
+          # respond_to @story do |format|
+          #   if @story.update(story_params)
+          #   redirect_to @story, notice: 'Story was successfully updated.' 
+
+          #   else
+          #   render :edit 
+          #   end
+          # end
         end
       
       # DELETE /houses/1
@@ -65,7 +68,7 @@ class StoriesController < ApplicationController
     
         # Never trust parameters from the scary internet, only allow the white list through.
         def story_params
-          params.require(:story).permit(:username, :description)
+          params.require(:story).permit(:title, :description)
         end
 
 end
