@@ -6,16 +6,15 @@
     <ul class="stories-list">
         <% @stories.each do |s| %>
         <li class="post">
-            <div class="user"><%= s.user.username %></div>
-         
-            <%= link_to s.title, story_path(s) %>
+            <div class="user"><%= '@' + s.user.username %></div>
+            
+            <h3 class="title"><%= link_to s.title, story_path(s) %></h3>
             <br/>
             <div class="description"><%= s.description %></div>
             
-        </li>
+        
         <% end %>
         
     </ul>
 
 
-<div class="rectangle"></div>

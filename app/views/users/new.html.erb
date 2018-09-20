@@ -1,27 +1,41 @@
-<h1>Sign Up</h1>
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+<div class="row">
+  <div class="col" id="center">
+    <div><h1>Sign Up</h1></div>
   </div>
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+</div>
+<div class="row">
+  <div class="col" id="center">
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    
+      <div class="field">
+        <%= f.label :username, { :class => "form-control-label"} %>
+        <br/>
+        <%= f.text_field :username, { :class => "form-control-label"} %>
+      </div>
+      <br/>
+      <div class="field">
+        <%= f.label :password, { :class => "form-control-label"} %>
+        <br/>
+        <%= f.password_field :password, { :class => "form-control-label"} %>
+      </div>
+      <br/>
+      <div class="field">
+        <%= f.label :password_confirmation, { :class => "form-control-label"} %>
+        <br/>
+        <%= f.password_field :password_confirmation, { :class => "form-control-label"} %>
+      </div>
+      <br/>
+      <div><%= f.submit :Submit, {:class => "submit-btn"} %></div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>
+</div>

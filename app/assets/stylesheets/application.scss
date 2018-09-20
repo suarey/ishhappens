@@ -20,6 +20,7 @@
          url('the_jacatra-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-size: 100pt;
 }
 @font-face {
     font-family: 'bikoregular';
@@ -36,6 +37,12 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+#center {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
 }
  .nav-item:last-of-type{
      position: absolute;
@@ -77,6 +84,7 @@
      margin: 10px; 
      padding: 40px;
      background-color: #dbdcdd;
+     list-style-type: none;
  }
  ul.stories-list {
      width: 50%; 
@@ -88,4 +96,41 @@
     font-family: 'bikolight';
     font-weight: normal;
     font-style: normal;
+ }
+ a {
+     color: black;
+ }
+ .inline {
+     display: inline;
+ }
+ .form-control {
+    border: 3px solid black;
+    border-bottom-right-radius: 20%;
+    border-right-width: 20px;
+    width: 300px;
+    background-color: #dbdcdd;
+    margin: 0 auto;
+    
+ }
+ .form-control-label {
+    border: 3px solid black;
+    padding: 5px;
+    border-bottom-right-radius: 20%;
+    border-right-width: 10px;
+    background-color: #dbdcdd;
+   
+ }
+ .back-edit {
+     display: inline; 
+ }
+
+ .submit-btn {
+    border: 3px solid black;
+    padding: 1px;
+    border-bottom-right-radius: 20%;
+    border-right-width: 10px;
+ }
+
+ .big {
+     height: 200px !important;
  }

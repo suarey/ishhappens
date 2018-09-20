@@ -1,13 +1,20 @@
 
 
-
-
       
-      <h1><%= @story.title %></h1>
-      <p><%= @story.description %></p>
+   
+      <li class="post">
+      <div class="user"><%= '@' + @story.user.username %></div>
+      <h2><%= @story.title %></h2>
+      <p class="description"><%= @story.description %></p>
+     
+      </li>
+     
+     
+
       <div>
       <% if logged_in? %>
-       <p><%= link_to "Edit", edit_story_path(@story) %></p>
-       <%= link_to 'Delete', story_path(@story), method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end%>
-      </div>
+       <p class="inline"><%= link_to "Edit |", edit_story_path(@story) %></p>
+       <p class="inline"><%= link_to ' Delete', story_path(@story), method: :delete, data: { confirm: 'Are you sure you wanna do that?' } %></p>
+            </div>
+      <% end %>
+      
