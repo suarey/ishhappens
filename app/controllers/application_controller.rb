@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
         redirect_to login_path, alert: 'Not authorized - you must be logged in!' if current_user.nil?
       end
 
-      helper_method :current_user, :logged_in
+      helper_method :current_user, :logged_in?
 
 end

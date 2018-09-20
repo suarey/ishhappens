@@ -1,27 +1,28 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="navbar-brand" href="#">ISH HAPPENS</a>
+  <a class="navbar-brand logo" href="#">ISH HAPPENS</a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse font" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-       <%= link_to "Home", root_path, {:class => "nav-link"} %>
+       <%= link_to "HOME", root_path, {:class => "nav-link"} %>
       </li>
       <li class="nav-item">
-        <%= link_to "Create Account", new_user_path, {:class => "nav-link"} %>
+        <%= link_to "CREATE ACCOUNT", new_user_path, {:class => "nav-link"} %>
       </li>
       <li class="nav-item">
-      <%= link_to "Create Story", new_story_path, {:class => "nav-link"} %>
+      <%= link_to "CREATE STORY", new_story_path, {:class => "nav-link"} %>
     </li>
       <% if !current_user %>
       <li class="nav-item">
-       <%= link_to "Login", login_path, {:class => "nav-link"} %>
+       <%= link_to "LOGIN", login_path, {:class => "nav-link"} %>
      </li>
     <% end %>
     <% if current_user %>
       <li class="nav-item">
-      <%= link_to "Logout", session_path('dummy'),{:class => "nav-link", :method => "delete"} %>
+      <%= link_to "LOGOUT", session_path('dummy'),{:class => "nav-link", :method => "delete"} %>
 
     </li>
     <li class="nav-item">

@@ -2,11 +2,20 @@
 
 
 
-<div>
-    <ul>
 
+    <ul class="stories-list">
         <% @stories.each do |s| %>
-            <li><%= link_to s.title, story_path(s) %></li>
+        <li class="post">
+            <div class="user"><%= s.user.username %></div>
+         
+            <%= link_to s.title, story_path(s) %>
+            <br/>
+            <div class="description"><%= s.description %></div>
+            
+        </li>
         <% end %>
+        
     </ul>
-</div>
+
+
+<div class="rectangle"></div>

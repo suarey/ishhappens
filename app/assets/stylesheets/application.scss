@@ -14,7 +14,29 @@
  *= require_self
  */
  @import "bootstrap";
+ @font-face {
+    font-family: 'the_jacatraregular';
+    src: url('the_jacatra-webfont.woff2') format('woff2'),
+         url('the_jacatra-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bikoregular';
+    src: url('biko_regular-webfont.woff2') format('woff2'),
+         url('biko_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
+@font-face {
+    font-family: 'bikolight';
+    src: url('biko_light-webfont.woff2') format('woff2'),
+         url('biko_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
  .nav-item:last-of-type{
      position: absolute;
      right: 10px;
@@ -22,4 +44,48 @@
 
  #nav {
      color: red;
+ }
+
+ title {
+     position: absolute;
+     right: 10px;
+ }
+.logo {
+    font-family: 'the_jacatraregular';
+    font-weight: normal;
+    font-style: normal;
+
+}
+ .nav-link {
+    font-family: 'bikoregular';
+    font-weight: normal;
+    font-style: normal;
+ }
+ div {
+    font-family: 'bikoregular';
+    font-weight: normal;
+    font-style: normal;
+ }
+ p {
+    font-family: 'bikoregular';
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ .post {
+     border: 3px solid black;
+     margin: 10px; 
+     padding: 40px;
+     background-color: #dbdcdd;
+ }
+ ul.stories-list {
+     width: 50%; 
+     margin: 0 auto;
+     list-style-type: none;
+     
+ }
+ .description {
+    font-family: 'bikolight';
+    font-weight: normal;
+    font-style: normal;
  }
