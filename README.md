@@ -7,7 +7,12 @@ Here's the Home Page!
 ![](https://i.imgur.com/YtL2ov3.png)
 
 
-https://i.imgur.com/FipItRv.png
+
+
+
+
+Here's the Sign-Up Page!
+![](https://i.imgur.com/FipItRv.png)
 
 
 
