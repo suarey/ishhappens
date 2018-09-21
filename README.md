@@ -25,5 +25,7 @@ CSS
 FontSquirrel 
 
 
-
+ERD: 2 model
+Users:  username & password
+Stories: title & description
 
