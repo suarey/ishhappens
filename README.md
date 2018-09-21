@@ -1,7 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
+
+Intro/description:
+ISH HAPPENS is a web application, that its users can use to post ridiculous or funny situations that they come across from their day. The app was inspired by another website called FML. 
+
+Screenshot(s)
+
+![Here's the Home Page!](https://i.imgur.com/YtL2ov3.png)
+
+
+
+
+
+
+
+
+
+Explanations of the technologies used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Things you may want to cover:
 
